@@ -15,7 +15,7 @@ export const Reset = effect(() => {
   SecondState.value = 0;
 });
 export const Tick = effect(function* () {
-  yield task.delay(200);
+  yield task.delay(50);
   SecondState.value++;
 });
 
@@ -23,6 +23,11 @@ export const TimerEpic = effect(function* () {
   // wait until Start effect called
   while (yield Start) {
     while (true) {
+      // if (StatusState.value === Statuses.Pausing) {
+      //   yield {Reset, Resume};
+      // } else {
+      //   yield {Reset, runTick: Tick()};
+      // }
       const isPausing = StatusState.value === Statuses.Pausing;
       // wait effect calls
       const {$target} = yield {

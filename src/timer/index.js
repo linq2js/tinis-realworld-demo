@@ -1,5 +1,6 @@
 import {useValue} from 'react-tinis';
 import React from 'react';
+import timeFormat from 'hh-mm-ss';
 import {Statuses, StatusState, SecondState} from './states';
 import {Resume, Start, Pause, Reset} from './effects';
 
@@ -23,7 +24,7 @@ export default function () {
           Resume
         </button>
       </div>
-      <h2>{seconds}</h2>
+      <h2>{timeFormat.fromS(seconds)}</h2>
     </>
   );
 }

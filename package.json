@@ -11,7 +11,8 @@
     "react-scripts": "3.4.1",
     "iscope": "^0.0.7",
     "tinis": "^0.0.0",
-    "react-tinis": "^0.0.0"
+    "react-tinis": "^0.0.0",
+    "hh-mm-ss": "^1.2.0"
   },
   "devDependencies": {
     "node-fetch": "^2.6.0"
